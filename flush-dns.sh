@@ -82,6 +82,10 @@ main() {
         dscacheutil -flushcache
         killall -HUP mDNSResponder
         ;;
+    10.13.*) # OS X High Sierra
+        dscacheutil -flushcache
+        killall -HUP mDNSResponder
+        ;;
     *)
         fail "${osx_version}: Unknown OS X version"
         ;;
