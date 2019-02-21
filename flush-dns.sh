@@ -74,22 +74,10 @@ main() {
         dscacheutil -flushcache
         killall -HUP mDNSResponder
         ;;
-    10.11.*) # OS X El Capitan
+    10.1[1234].*) # OS X El Capitan, MacOS Sierra, High Sierra, and Mojave
         dscacheutil -flushcache
         killall -HUP mDNSResponder
         ;;
-    10.12.*) # OS X Sierra
-        dscacheutil -flushcache
-        killall -HUP mDNSResponder
-        ;;
-    10.13.*) # OS X High Sierra
-        dscacheutil -flushcache
-        killall -HUP mDNSResponder
-        ;;
-    10.14.*) # OS X Mojave
-        dscacheutil -flushcache
-        killall -HUP mDNSResponder
-        ;;        
     *)
         fail "${osx_version}: Unknown OS X version"
         ;;
