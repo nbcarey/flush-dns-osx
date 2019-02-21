@@ -86,6 +86,10 @@ main() {
         dscacheutil -flushcache
         killall -HUP mDNSResponder
         ;;
+    10.14.*) # OS X Mojave
+        dscacheutil -flushcache
+        killall -HUP mDNSResponder
+        ;;        
     *)
         fail "${osx_version}: Unknown OS X version"
         ;;
