@@ -74,7 +74,7 @@ main() {
         dscacheutil -flushcache
         killall -HUP mDNSResponder
         ;;
-    10.1[1234].*) # OS X El Capitan, MacOS Sierra, High Sierra, and Mojave
+    10.1[12345].*) # OS X El Capitan, MacOS Sierra, High Sierra, Mojave and Catalina
         dscacheutil -flushcache
         killall -HUP mDNSResponder
         ;;
